@@ -50,9 +50,10 @@ extension HistoryWindowController {
 
     func initialize() {
         viewmodel.itemsource.removeAll()
-        historyCenter.getRecordList()
-            .forEach { record in
-                viewmodel.itemsource.append(record)
-            }
+        let list = historyCenter.getRecordList()
+        
+        list.forEach { record in
+            viewmodel.itemsource.append(record)
+        }
     }
 }

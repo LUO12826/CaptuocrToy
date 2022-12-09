@@ -11,7 +11,10 @@ import Async
 import Foundation
 
 class BaiduRecognizer: Recognizer {
-    func recognize(picBase64: String, progress: ((Double) -> Void)? = nil) throws -> String {
+    func recognize(data: Data, progress: ((Double) -> Void)? = nil) throws -> String {
+        
+        let picBase64 = data.base64EncodedString()
+        
         progress?(0)
         guard let setting = AppDelegate.container.resolve(Settings.self), setting.appearence.apitype == .baiduocr else {
             throw NSError(domain: "Inner exception", code: 0, userInfo: nil)

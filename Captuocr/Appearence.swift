@@ -19,7 +19,7 @@ class Appearence: EVObject {
     var showInDock = false
     var enableQrcode = false
     required init() {
-        apitype = .baiduocr
+        apitype = .macOSbuiltin
         baidu_appid = "10438145"
         baidu_appkey = "N7GWF63CRc2RM8iYHih6GBjZ"
         baidu_appsecret = "McqgCdBOprgOjdiysA7U18FTouX1iwDz"
@@ -33,15 +33,25 @@ class Appearence: EVObject {
     override func propertyConverters() -> [(key: String, decodeConverter: ((Any?) -> Void), encodeConverter: (() -> Any?))] {
         return [(
             key: "apitype",
-            decodeConverter: { self.apitype =
-                ($0 as? Int) == ApiType.googlevision.rawValue
-                ? .googlevision
-                : .baiduocr },
-            encodeConverter: { self.apitype.rawValue })]
+            decodeConverter: {
+                let typeVal = $0 as? Int
+                if typeVal == ApiType.googlevision.rawValue {
+                    self.apitype = .googlevision
+                }
+                else if typeVal == ApiType.baiduocr.rawValue {
+                    self.apitype = .baiduocr
+                }
+                else {
+                    self.apitype = .macOSbuiltin
+                }
+            },
+            encodeConverter: { self.apitype.rawValue }
+        )]
     }
 }
 
 enum ApiType: Int {
     case baiduocr
     case googlevision
+    case macOSbuiltin
 }

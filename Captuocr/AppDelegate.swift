@@ -51,11 +51,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // scope
         container.register(Recognizer.self) { r in
             let settings = r.resolve(Settings.self)!
-            if settings.appearence.apitype == .baiduocr {
+            
+            switch settings.appearence.apitype {
+            case .baiduocr:
                 return BaiduRecognizer()
+            case .googlevision:
+                return GoogleVisionRecognizer()
+            case .macOSbuiltin:
+                return macOSRecognizer()
             }
-
-            return GoogleVisionRecognizer()
         }
         return container
     }()

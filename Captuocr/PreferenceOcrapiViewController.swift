@@ -11,6 +11,8 @@ import Cocoa
 class PreferenceOcrapiViewController: NSViewController {
     @IBOutlet var radioBaidu: NSButton!
     @IBOutlet var radioGoogle: NSButton!
+    @IBOutlet weak var radioMacOS: NSButton!
+    
     @IBOutlet var tfBaiduAppid: NSTextField!
     @IBOutlet var tfAppKey: NSTextField!
     @IBOutlet var tfAppSecret: NSTextField!

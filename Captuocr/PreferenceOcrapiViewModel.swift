@@ -25,12 +25,19 @@ extension PreferenceOcrapiViewController {
                 self.tfAppKey.isEnabled = true
                 self.tfAppSecret.isEnabled = true
                 self.tfGoogleSecret.isEnabled = false
-            } else {
+            } else if t == .googlevision {
                 self.radioGoogle.state = NSControl.StateValue.on
                 self.tfBaiduAppid.isEnabled = false
                 self.tfAppKey.isEnabled = false
                 self.tfAppSecret.isEnabled = false
                 self.tfGoogleSecret.isEnabled = true
+            }
+            else if t == .macOSbuiltin {
+                self.radioMacOS.state = NSControl.StateValue.on
+                self.tfBaiduAppid.isEnabled = false
+                self.tfAppKey.isEnabled = false
+                self.tfAppSecret.isEnabled = false
+                self.tfGoogleSecret.isEnabled = false
             }
         }.dispose(in: radioBaidu.bag)
 
@@ -41,6 +48,10 @@ extension PreferenceOcrapiViewController {
         radioGoogle.reactive.controlEvent.observeNext { _ in
             self.viewmodel.type.value = .googlevision
         }.dispose(in: radioGoogle.bag)
+        
+        radioMacOS.reactive.controlEvent.observeNext { _ in
+            self.viewmodel.type.value = .macOSbuiltin
+        }.dispose(in: radioMacOS.bag)
 
         viewmodel.baiduAppId.bidirectionalBind(to: tfBaiduAppid.reactive.editingString)
         viewmodel.baiduAppKey.bidirectionalBind(to: tfAppKey.reactive.editingString)

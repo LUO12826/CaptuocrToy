@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,13 +17,13 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <window title="首选项" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
+        <window title="首选项" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <rect key="contentRect" x="196" y="240" width="617" height="341"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2304" height="1271"/>
             <view key="contentView" wantsLayer="YES" id="se5-gp-TjO">
                 <rect key="frame" x="0.0" y="0.0" width="617" height="341"/>
-                <autoresizingMask key="autoresizingMask"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             </view>
             <toolbar key="toolbar" implicitIdentifier="1582BBC3-9654-49B9-93E2-91D41B83F9A4" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="a9V-kg-MAu">
                 <allowedToolbarItems>
@@ -33,11 +33,15 @@
                     <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="CLK-1b-Zjr"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="ea8-il-i4w"/>
                     <toolbarItem implicitItemIdentifier="4279131F-5E5A-47E6-BF38-6F3576710FB7" label="OCR Api" paletteLabel="OCR Api" tag="-1" image="icons8-rest-api-32" selectable="YES" id="w72-xs-scu">
+                        <size key="minSize" width="22" height="22"/>
+                        <size key="maxSize" width="22" height="22"/>
                         <connections>
                             <action selector="ocrapiClick:" target="-2" id="xIx-1U-VYm"/>
                         </connections>
                     </toolbarItem>
                     <toolbarItem implicitItemIdentifier="35AFF0B5-0709-4DFD-817E-61502C4D3B74" label="常规" paletteLabel="常规" tag="-1" image="icons8-settings-32" selectable="YES" id="dHo-HP-9yR">
+                        <size key="minSize" width="22" height="22"/>
+                        <size key="maxSize" width="22" height="22"/>
                         <connections>
                             <action selector="generalClick:" target="-2" id="kcI-Hi-VnC"/>
                         </connections>
@@ -55,7 +59,7 @@
         </window>
     </objects>
     <resources>
-        <image name="icons8-rest-api-32" width="51.200000762939453" height="51.200000762939453"/>
-        <image name="icons8-settings-32" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="icons8-rest-api-32" width="32" height="32"/>
+        <image name="icons8-settings-32" width="32" height="32"/>
     </resources>
 </document>

@@ -144,14 +144,17 @@ class StatusBarCenter {
 
     private func recognizepic(picPath: String) {
         let picData = try? Data(contentsOf: URL(fileURLWithPath: picPath))
-        if let base64 = picData?.base64EncodedString(), let recognizer = AppDelegate.container.resolve(Recognizer.self) {
+        
+        if let data = picData,
+           let recognizer = AppDelegate.container.resolve(Recognizer.self) {
+            let base64 = data.base64EncodedString()
             statusItem.image = nil
             statusItem.title = "0%"
             Async.background {
                 do {
-                    let final = try recognizer.recognize(picBase64: base64, progress: { p in
+                    let final = try recognizer.recognize(data: data, progress: { p in
                         Async.main {
-                            self.statusItem.title = "\(p * 100)%"
+                            self.statusItem.title = "\(Int(p) * 100)%"
                         }
                     })
                     Async.main {
@@ -161,6 +164,8 @@ class StatusBarCenter {
                         self.recognizeVc.viewmodel.recognizedText.value = final
                         self.showPopover()
                     }
+                    
+                    
                     let record = HistoryRecord()
                     record.txt = final
                     record.imgBase64 = base64
@@ -209,10 +214,10 @@ class StatusBarCenter {
     }
 
     private func showPopover() {
-       NSSound(named: NSSound.Name("Pop"))?.play()
+//       NSSound(named: NSSound.Name("Pop"))?.play()
 //
-//        if let button = statusItem.button {
-//            popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
-//        }
+        if let button = statusItem.button {
+            popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
+        }
     }
 }

@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol Recognizer {
-    func recognize(picBase64: String, progress: ((Double) -> Void)?) throws -> String
+protocol Recognizer: class {
+    func recognize(data: Data, progress: ((Double) -> Void)?) throws -> String
 }

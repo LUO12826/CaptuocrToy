@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -14,6 +14,7 @@
                 <outlet property="btnRestore" destination="G0S-yg-DtM" id="67c-yC-2Hc"/>
                 <outlet property="radioBaidu" destination="dSt-Hf-zww" id="5lt-AJ-va4"/>
                 <outlet property="radioGoogle" destination="dic-m1-tVT" id="l6w-0Y-Ux5"/>
+                <outlet property="radioMacOS" destination="ED8-HV-NKm" id="825-So-cWA"/>
                 <outlet property="tfAppKey" destination="4hT-ue-3ug" id="z9A-Y0-sLV"/>
                 <outlet property="tfAppSecret" destination="raK-QO-NrM" id="zWE-T2-Jps"/>
                 <outlet property="tfBaiduAppid" destination="b2q-ei-pfA" id="EOJ-C7-l9U"/>
@@ -28,7 +29,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LFV-NV-5H0">
-                    <rect key="frame" x="13" y="386" width="85" height="17"/>
+                    <rect key="frame" x="13" y="387" width="87" height="16"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OCR Api类型 " id="3AR-8r-Gp1">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
@@ -36,24 +37,24 @@
                     </textFieldCell>
                 </textField>
                 <button translatesAutoresizingMaskIntoConstraints="NO" id="dSt-Hf-zww">
-                    <rect key="frame" x="14" y="350" width="88" height="18"/>
+                    <rect key="frame" x="13" y="351" width="92" height="18"/>
                     <buttonCell key="cell" type="radio" title="Baidu OCR" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="igj-NL-mjZ">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                 </button>
                 <button translatesAutoresizingMaskIntoConstraints="NO" id="dic-m1-tVT">
-                    <rect key="frame" x="121" y="350" width="106" height="18"/>
+                    <rect key="frame" x="125" y="351" width="110" height="18"/>
                     <buttonCell key="cell" type="radio" title="Google Vision" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="cDU-KI-bPt">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                 </button>
                 <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="mvm-dn-o66">
-                    <rect key="frame" x="15" y="377" width="632" height="5"/>
+                    <rect key="frame" x="15" y="378" width="632" height="5"/>
                 </box>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rwg-Rf-n3c">
-                    <rect key="frame" x="13" y="312" width="73" height="17"/>
+                    <rect key="frame" x="13" y="314" width="73" height="16"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Baidu OCR " id="TC9-mh-T99">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
@@ -61,10 +62,10 @@
                     </textFieldCell>
                 </textField>
                 <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="Rki-m7-3gr">
-                    <rect key="frame" x="15" y="303" width="632" height="5"/>
+                    <rect key="frame" x="15" y="305" width="632" height="5"/>
                 </box>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bpD-Nn-Pca">
-                    <rect key="frame" x="13" y="274" width="46" height="17"/>
+                    <rect key="frame" x="13" y="277" width="46" height="16"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="APP ID" id="Piz-BD-GNM">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -72,15 +73,15 @@
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b2q-ei-pfA">
-                    <rect key="frame" x="95" y="271" width="552" height="22"/>
+                    <rect key="frame" x="95" y="274" width="552" height="21"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="N36-fq-iWY">
                         <font key="font" metaFont="system"/>
-                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="j2r-rt-eOB">
-                    <rect key="frame" x="13" y="240" width="55" height="17"/>
+                    <rect key="frame" x="13" y="244" width="55" height="16"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="APP Key" id="D3U-22-j9m">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -88,15 +89,15 @@
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4hT-ue-3ug">
-                    <rect key="frame" x="95" y="237" width="552" height="22"/>
+                    <rect key="frame" x="95" y="241" width="552" height="21"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="h6y-c7-pKu">
                         <font key="font" metaFont="system"/>
-                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bgm-pI-lCm">
-                    <rect key="frame" x="13" y="206" width="73" height="17"/>
+                    <rect key="frame" x="13" y="211" width="73" height="16"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="APP Secret" id="Xai-xy-vCg">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -104,15 +105,15 @@
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="raK-QO-NrM">
-                    <rect key="frame" x="95" y="203" width="552" height="22"/>
+                    <rect key="frame" x="95" y="208" width="552" height="21"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="8xW-8d-5EZ">
                         <font key="font" metaFont="system"/>
-                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WwI-bO-6v0">
-                    <rect key="frame" x="13" y="164" width="88" height="17"/>
+                    <rect key="frame" x="13" y="170" width="88" height="16"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Google Vision" id="W4d-7p-NQw">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
@@ -120,10 +121,10 @@
                     </textFieldCell>
                 </textField>
                 <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="YcW-3O-aMG">
-                    <rect key="frame" x="15" y="155" width="632" height="5"/>
+                    <rect key="frame" x="15" y="161" width="632" height="5"/>
                 </box>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CJy-WY-LFi">
-                    <rect key="frame" x="13" y="126" width="73" height="17"/>
+                    <rect key="frame" x="13" y="133" width="73" height="16"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="APP Secret" id="09M-Jy-i3x">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -131,39 +132,46 @@
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="t9M-FU-fRX">
-                    <rect key="frame" x="95" y="123" width="552" height="22"/>
+                    <rect key="frame" x="95" y="130" width="552" height="21"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="tZj-bk-lkY">
                         <font key="font" metaFont="system"/>
-                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Xri-xQ-Uf6">
-                    <rect key="frame" x="586" y="8" width="67" height="32"/>
+                    <rect key="frame" x="593" y="8" width="61" height="32"/>
                     <buttonCell key="cell" type="push" title="确认" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5mf-9e-85F">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="G0S-yg-DtM">
-                    <rect key="frame" x="516" y="8" width="67" height="32"/>
+                    <rect key="frame" x="531" y="8" width="61" height="32"/>
                     <buttonCell key="cell" type="push" title="复原" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Wfl-ta-SxY">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mc4-KX-akw">
-                    <rect key="frame" x="95" y="312" width="91" height="17"/>
+                    <rect key="frame" x="95" y="313" width="89" height="18"/>
                     <buttonCell key="cell" type="inline" title="点此处免费注册" bezelStyle="inline" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MHg-bc-Qb7">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="smallSystemBold"/>
                     </buttonCell>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kMF-YB-aV7">
-                    <rect key="frame" x="110" y="164" width="91" height="17"/>
+                    <rect key="frame" x="110" y="169" width="89" height="18"/>
                     <buttonCell key="cell" type="inline" title="点此处免费注册" bezelStyle="inline" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dPc-AX-EMl">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="smallSystemBold"/>
+                    </buttonCell>
+                </button>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="ED8-HV-NKm">
+                    <rect key="frame" x="255" y="351" width="70" height="18"/>
+                    <buttonCell key="cell" type="radio" title="macOS" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="gm2-ab-77d">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
                 </button>
             </subviews>
@@ -204,8 +212,10 @@
                 <constraint firstItem="t9M-FU-fRX" firstAttribute="top" secondItem="YcW-3O-aMG" secondAttribute="bottom" constant="12" id="j3b-kk-jnc"/>
                 <constraint firstItem="j2r-rt-eOB" firstAttribute="centerY" secondItem="4hT-ue-3ug" secondAttribute="centerY" id="kWp-wf-PdI"/>
                 <constraint firstItem="WwI-bO-6v0" firstAttribute="top" secondItem="raK-QO-NrM" secondAttribute="bottom" constant="22" id="kpI-fT-rll"/>
+                <constraint firstItem="ED8-HV-NKm" firstAttribute="leading" secondItem="dic-m1-tVT" secondAttribute="trailing" constant="22" id="rSh-zu-jLk"/>
                 <constraint firstItem="Rki-m7-3gr" firstAttribute="top" secondItem="rwg-Rf-n3c" secondAttribute="bottom" constant="6" id="tBz-TH-ccM"/>
                 <constraint firstItem="Bgm-pI-lCm" firstAttribute="centerY" secondItem="raK-QO-NrM" secondAttribute="centerY" id="tnt-go-Nue"/>
+                <constraint firstItem="ED8-HV-NKm" firstAttribute="top" secondItem="mvm-dn-o66" secondAttribute="bottom" constant="12" id="tpa-LH-zhh"/>
                 <constraint firstItem="b2q-ei-pfA" firstAttribute="top" secondItem="Rki-m7-3gr" secondAttribute="bottom" constant="12" id="uP8-qG-a1X"/>
                 <constraint firstItem="kMF-YB-aV7" firstAttribute="leading" secondItem="WwI-bO-6v0" secondAttribute="trailing" constant="11" id="uRt-g6-bDX"/>
                 <constraint firstAttribute="bottom" secondItem="Xri-xQ-Uf6" secondAttribute="bottom" constant="15" id="uYs-ap-JRQ"/>
@@ -216,7 +226,7 @@
                 <constraint firstItem="WwI-bO-6v0" firstAttribute="centerY" secondItem="kMF-YB-aV7" secondAttribute="centerY" id="yRf-dL-FR8"/>
                 <constraint firstAttribute="trailing" secondItem="mvm-dn-o66" secondAttribute="trailing" constant="15" id="zcl-Id-3sc"/>
             </constraints>
-            <point key="canvasLocation" x="168" y="34"/>
+            <point key="canvasLocation" x="14" y="-23"/>
         </customView>
     </objects>
 </document>
